@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>芳芳姐理賠導航員｜職災．車禍．學保．保險爭議 一站式統包服務</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="職災、車禍、學保、保險爭議，一通電話，芳芳姐幫你統籌處理勞保、商業保險、強制險、勞資爭議，沒賠到錢不收費。">
+
+  <style>
+    :root {
+      --primary: #1f2937;
+/* 深藍 */
+      --primary-light: #111827;
+      --accent: #e11d48;
+/* 紅點 */
+      --bg: #f3f4f6;
+      --card-bg: #ffffff;
+      --text-main: #111827;
+      --text-sub: #4b5563;
+      --radius-lg: 16px;
+--shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+}
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 16px;
+}
+
+    /* NAVBAR */
+    header {
+      position: sticky;
+top: 0;
+      z-index: 50;
+      background: rgba(15,23,42,0.98);
+      color: #fff;
+      backdrop-filter: blur(10px);
+}
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+}
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+}
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+background: radial-gradient(circle at 30% 30%, #f97373, var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+}
+
+    .logo-text-main {
+      font-weight: 700;
+      font-size: 18px;
+}
+
+    .logo-text-sub {
+      font-size: 12px;
+      opacity: 0.8;
+}
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      font-size: 14px;
+}
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 2px;
+}
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.2s ease;
+}
+
+    .nav-links a:hover::after {
+      width: 100%;
+}
+
+    .nav-cta {
+      display: none;
+}
+
+    @media (min-width: 900px) {
+      .nav-cta {
+        display: flex;
+}
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s ease;
+gap: 6px;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+box-shadow: 0 8px 18px rgba(220, 38, 38, 0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+box-shadow: 0 10px 24px rgba(220, 38, 38, 0.45);
+    }
+
+    .btn-outline {
+      border-color: rgba(156,163,175,0.6);
+color: #e5e7eb;
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      border-color: #e5e7eb;
+      background: rgba(31,41,55,0.8);
+}
+
+    /* HERO */
+    .hero {
+      background: radial-gradient(circle at top left, #1f2937 0, #020617 45%, #020617 100%);
+color: #fff;
+      padding: 40px 0 56px;
+    }
+
+    .hero-grid {
+      display: grid;
+grid-template-columns: 1.1fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    @media (min-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1.2fr 1fr;
+}
+    }
+
+    .hero-chip-row {
+      display: flex;
+      align-items: center;
+flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .chip {
+      font-size: 12px;
+padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(248,250,252,0.2);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(15,23,42,0.8);
+}
+
+    .chip-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+}
+
+    .hero-title {
+      font-size: 26px;
+      line-height: 1.4;
+      margin-bottom: 10px;
+      font-weight: 800;
+}
+
+    @media (min-width: 768px) {
+      .hero-title {
+        font-size: 32px;
+}
+    }
+
+    .hero-highlight {
+      color: #f97373;
+}
+
+    .hero-subtitle {
+      font-size: 15px;
+      color: #e5e7eb;
+      margin-bottom: 18px;
+}
+
+    .hero-bullets {
+      display: grid;
+      gap: 6px;
+      font-size: 13px;
+      margin-bottom: 18px;
+color: #d1d5db;
+    }
+
+    .hero-bullets span {
+      display: inline-flex;
+      align-items: flex-start;
+      gap: 6px;
+}
+
+    .hero-bullets strong {
+      color: #f9fafb;
+}
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+margin-bottom: 12px;
+    }
+
+    .hero-note {
+      font-size: 12px;
+      color: #9ca3af;
+}
+
+    .hero-card {
+      background: radial-gradient(circle at top left, rgba(248,250,252,0.06), rgba(15,23,42,1));
+      border-radius: 24px;
+border: 1px solid rgba(148,163,184,0.3);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-card-title {
+      font-size: 14px;
+margin-bottom: 8px;
+      color: #e5e7eb;
+      font-weight: 600;
+    }
+
+    .hero-stat-row {
+      display: flex;
+flex-wrap: wrap;
+      gap: 16px;
+      font-size: 13px;
+      color: #cbd5f5;
+    }
+
+    .hero-stat-label {
+      font-size: 11px;
+color: #9ca3af;
+    }
+
+    /* GENERIC SECTIONS */
+    section {
+      padding: 40px 0;
+}
+
+    section:nth-of-type(even) {
+      background: #ffffff;
+}
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 24px;
+}
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 4px;
+}
+
+    .section-subtitle {
+      font-size: 14px;
+      color: var(--text-sub);
+}
+
+    /* 4 保證 */
+    .guarantee-grid {
+      display: grid;
+gap: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .guarantee-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+padding: 16px 16px 14px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(148,163,184,0.25);
+}
+
+    .card-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+margin-bottom: 6px;
+    }
+
+    .card-body {
+      font-size: 13px;
+      color: var(--text-sub);
+}
+
+    /* 服務項目 */
+    .service-layout {
+      display: grid;
+gap: 24px;
+    }
+
+    @media (min-width: 900px) {
+      .service-layout {
+        grid-template-columns: 1.1fr 1fr;
+align-items: flex-start;
+      }
+    }
+
+    .service-list {
+      display: grid;
+gap: 10px;
+      font-size: 14px;
+    }
+
+    .service-item-title {
+      font-weight: 600;
+      margin-bottom: 2px;
+}
+
+    .service-item-desc {
+      font-size: 13px;
+      color: var(--text-sub);
+}
+
+    .service-note {
+      font-size: 12px;
+      color: var(--text-sub);
+      margin-top: 10px;
+}
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.04);
+      border: 1px dashed rgba(148,163,184,0.7);
+      color: var(--text-sub);
+}
+
+    /* 案例 */
+    .case-grid {
+      display: grid;
+gap: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .case-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+    }
+
+    .case-tag {
+      font-size: 11px;
+      padding: 2px 8px;
+border-radius: 999px;
+      background: rgba(37,99,235,0.09);
+      color: #1d4ed8;
+      display: inline-block;
+      margin-bottom: 4px;
+}
+
+    .case-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+}
+
+    .case-body {
+      font-size: 13px;
+      color: var(--text-sub);
+      margin-bottom: 6px;
+}
+
+    .case-more {
+      font-size: 12px;
+      color: var(--accent);
+}
+
+    /* 小教室 */
+    .lesson-list {
+      display: grid;
+gap: 12px;
+      font-size: 14px;
+    }
+
+    .lesson-item {
+      padding: 12px 14px;
+      border-radius: 12px;
+background: #f9fafb;
+      border: 1px solid rgba(209,213,219,0.9);
+    }
+
+    .lesson-title {
+      font-size: 14px;
+font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .lesson-meta {
+      font-size: 11px;
+      color: var(--text-sub);
+margin-bottom: 4px;
+    }
+
+    .lesson-body {
+      font-size: 13px;
+      color: var(--text-sub);
+}
+
+    /* 聯絡我們 */
+    .contact-layout {
+      display: grid;
+gap: 20px;
+    }
+
+    @media (min-width: 900px) {
+      .contact-layout {
+        grid-template-columns: 1.1fr 1fr;
+align-items: flex-start;
+      }
+    }
+
+    .contact-list {
+      font-size: 14px;
+display: grid;
+      gap: 8px;
+      margin: 10px 0 16px;
+    }
+
+    .contact-label {
+      font-weight: 600;
+margin-right: 6px;
+    }
+
+    .contact-hint {
+      font-size: 12px;
+      color: var(--text-sub);
+}
+
+    .contact-form {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      box-shadow: var(--shadow-soft);
+border: 1px solid rgba(148,163,184,0.35);
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+}
+
+    .form-label {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 4px;
+      color: var(--text-sub);
+}
+
+    .form-control,
+    .form-textarea {
+      width: 100%;
+      padding: 8px 10px;
+border-radius: 10px;
+      border: 1px solid rgba(148,163,184,0.9);
+      font-size: 13px;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+background: #f9fafb;
+    }
+
+    .form-control:focus,
+    .form-textarea:focus {
+      border-color: var(--accent);
+box-shadow: 0 0 0 1px rgba(248,113,113,0.4);
+      background: #ffffff;
+    }
+
+    .form-textarea {
+      min-height: 90px;
+resize: vertical;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #020617;
+color: #9ca3af;
+      padding: 18px 0 20px;
+      font-size: 12px;
+    }
+
+    .footer-row {
+      display: flex;
+flex-direction: column;
+      gap: 6px;
+    }
+
+    @media (min-width: 768px) {
+      .footer-row {
+        flex-direction: row;
+justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .footer-links {
+      display: flex;
+flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      color: #e5e7eb;
+      opacity: 0.8;
+}
+
+    /* 小螢幕調整 */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+}
+    }
+
+    html {
+      scroll-behavior: smooth;
+}
+    
+    /* === 新增浮動聯絡按鈕 CSS === */
+    .floating-contact {
+      position: fixed;
+      right: 16px;
+      bottom: 60px; /* 避免與 footer 重疊 */
+      z-index: 1000;
+      display: grid;
+      gap: 12px;
+    }
+
+    .floating-btn {
+      width: 52px;
+      height: 52px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 28px; /* 增大字體以模擬圖示 */
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+
+    .floating-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+    }
+
+    .line-btn {
+      background: #07c160; /* LINE Green */
+      font-size: 24px;
+    }
+
+    .fb-btn {
+      background: #1877f2; /* Facebook Blue */
+    }
+
+    .phone-btn {
+      background: #fbc02d; /* Phone/Call Yellow */
+    }
+
+    @media (max-width: 768px) {
+        /* 在手機上可以讓按鈕小一點 */
+        .floating-btn {
+            width: 44px;
+            height: 44px;
+        }
+    }
+    /* === 浮動聯絡按鈕 CSS 結束 === */
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo-wrap">
+        <div class="logo-mark">芳</div>
+        <div>
+          <div class="logo-text-main">芳芳姐理賠導航員</div>
+          <div class="logo-text-sub">職災．車禍．學保．保險爭議 統包處理</div>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#about">關於我們</a>
+        <a 
+href="#services">服務項目</a>
+        <a href="#cases">客戶案例</a>
+        <a href="#classroom">理賠小教室</a>
+        <a href="#contact">聯絡我們</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a class="btn btn-outline" href="#contact">預約諮詢</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-chip-row">
+         
+  <div class="chip">
+            <span class="chip-dot"></span>
+            職災．車禍．學保．保險爭議
+          </div>
+          <div class="chip">
+            <span class="chip-dot"></span>
+            北中南皆有實務案件
+          </div>
+        </div>
+
+        <h1 
+class="hero-title">
+          發生意外，不用自己孤軍奮戰。<br />
+          <span class="hero-highlight">一通訊息，芳芳姐幫你統籌所有理賠。</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          從勞保、職災保險、車禍強制險、商業保險，到勞資爭議與損害賠償，
+          以「統包」方式幫你盤點權益、規劃策略。<br />
+          全程零預收，成功拿到理賠金入你帳戶後再酌收服務費。
+        </p>
+
+        <div class="hero-bullets">
+          <span>✅ <strong>沒賠到錢不收費：</strong>申請未過、不理賠，你不用付任何費用。</span>
+  
+         <span>✅ <strong>案件全局控管：</strong>職災＋車禍＋保險＋勞資爭議，一次幫你串起來。</span>
+          <span>✅ <strong>條款講人話：：</strong>把艱深的保單條款翻成你聽得懂的白話。</span>
+        </div>
+
+        <div class="hero-cta-row">
+          <a class="btn btn-primary" href="https://line.me/ti/p/0922388397" target="_blank" rel="noopener">
+            加入 LINE 線上諮詢
+          </a>
+       
+    <a class="btn btn-outline" href="#contact">我要預約回電</a>
+        </div>
+
+        <div class="hero-note">
+          提醒：發生事故後，每一個「現在的選擇」，都在決定你一年、三年、甚至十年後能不能拿回應有的權益。
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-card-title">近期常見委託類型</div>
+        <div class="hero-stat-row">
+          <div>
+            <div class="hero-stat-label">職災案件</div>
+     
+        <div>工地職災、外包司機壓傷、長期勞損、未加保勞保⋯⋯</div>
+          </div>
+          <div>
+            <div class="hero-stat-label">車禍理賠</div>
+            <div>強制險後遺症、第三人責任險、和解後追加理賠⋯⋯</div>
+          </div>
+          <div>
+            <div class="hero-stat-label">其他爭議</div>
+            <div>學保／托嬰意外、疾病理賠遭拒、保單條款認定爭議等</div>
+   
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">ABOUT</div>
+        <h2 class="section-title">四大安心保證</h2>
+        <p class="section-subtitle">
+          不是只幫你送件，而是陪你一起走完整個理賠流程，把每一塊權益都翻出來。
+        </p>
+      </div>
+
+   
+    <div class="guarantee-grid">
+        <div class="card">
+          <div class="card-tag">01 安心</div>
+          <div class="card-title">全程陪伴，不放生</div>
+          <div class="card-body">
+            不論你是剛出事、已經在休養，還是收到拒賠信，
+            從蒐證、填表、送件、補件、複查到必要時的訴訟協調，都有專人協助。
+          </div>
+        </div>
+
+        <div class="card">
+  
+         <div class="card-tag">02 專業</div>
+          <div class="card-title">職災＋車禍＋保險的交叉判讀</div>
+          <div class="card-body">
+            不只看一張診斷書，而是從病歷、勞保年資、投保薪資、事故經過去判斷
+            「可以主張哪些給付」、「要走哪一條線比較划算」。
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">03 服務</div>
+     
+      <div class="card-title">說人話，把選項攤開來給你選</div>
+          <div class="card-body">
+            不會只丟一堆法條，而是用白話跟你說每一種做法的優缺點，
+            例如：要不要跟公司撕破臉？和解金怎麼談才不吃虧？讓你做有資訊的選擇。
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">04 團隊</div>
+          <div class="card-title">跨領域合作，讓你不再自己瞎猜</div>
+         
+  <div class="card-body">
+            視案件需要，協調醫師、會計、律師等專業伙伴，
+            讓你不用一個人 Google 到頭昏眼花，還不確定自己有沒有做對。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">SERVICES</div>
+        <h2 class="section-title">服務項目</h2>
+     
+    <p class="section-subtitle">
+          不只是「代辦」，而是先幫你看清楚權益，再一起決定策略的「理賠導航」。
+        </p>
+      </div>
+
+      <div class="service-layout">
+        <div class="service-list">
+          <div>
+            <div class="service-item-title">1.
+車禍調解與理賠規劃</div>
+            <div class="service-item-desc">
+              包含強制險、第三人責任險、自小客車超額責任險、精神慰撫金、人身損害賠償、後遺症申請、
+              和解書條款檢視等。
+            </div>
+          </div>
+
+          <div>
+            <div class="service-item-title">2.
+勞保／職災保險給付申請</div>
+            <div class="service-item-desc">
+              傷病給付、失能給付、喪葬給付、遺屬年金，以及「高薪低報」差額權益評估與後續行動方案。
+            </div>
+          </div>
+
+          <div>
+            <div class="service-item-title">3.
+職業災害全局規劃</div>
+            <div class="service-item-desc">
+              「是不是職災？」、「可以怎麼主張？」、
+              「公司要負哪些責任？」包含勞基法第59條、勞資爭議協商、就業保險失業給付配套。
+            </div>
+          </div>
+
+          <div>
+            <div class="service-item-title">4.
+學保、托嬰、學童意外與疾病理賠</div>
+            <div class="service-item-desc">
+              學生平安保險、托嬰中心責任、校園意外、智能不足／癲癇等疾病相關理賠爭取。
+            </div>
+          </div>
+
+          <div>
+            <div class="service-item-title">5.
+各類商業保險爭議與拒賠申訴</div>
+            <div class="service-item-desc">
+              壽險、意外險、醫療險、重大傷病險、保費豁免、體況未告知等拒賠案件之評估與申訴策略。
+            </div>
+          </div>
+
+          <div class="service-note">
+            ✅ 服務採「無預收、結果論」：理賠金沒進你帳戶，不會跟你收費。<br />
+            ✅ 有些案件只需要諮詢與文件校對，也可採「單次諮詢」方式進行。
+          </div>
+   
+      </div>
+
+        <div>
+          <div class="card">
+            <div class="card-tag">流程小提醒</div>
+            <div class="card-title">發生事故後的三個關鍵步驟</div>
+            <div class="card-body">
+              <ul style="padding-left: 16px; margin-top: 6px;">
+                <li>第一步：保留所有醫療單據、診斷書、影像資料（X 光、MRI）</li>
+  
+               <li>第二步：先諮詢再簽任何和解書、切結書、聲明書</li>
+                <li>第三步：釐清「勞保＋商業保險＋肇事責任」的交集與順序</li>
+              </ul>
+              <div style="margin-top: 8px;">
+                <span class="pill">
+                  不確定怎麼做？先截圖病歷 &amp;
+保單，用 LINE 傳給芳芳姐，先幫你看方向。
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </section>
+
+  <section id="cases">
+    <div class="container">
+      <div class="section-header">
+     
+    <div class="eyebrow">CASES</div>
+        <h2 class="section-title">真實案件剪影</h2>
+        <p class="section-subtitle">
+          每一個案件背後，都是一個家庭的生活重整。以下案例已匿名與改寫，僅保留關鍵結構供參考。
+        </p>
+      </div>
+
+      <div class="case-grid">
+        <div class="card">
+          <div class="case-tag">車禍腦傷・後遺症</div>
+          <div class="case-title">同一張診斷書，理賠金從 20 萬變 300 萬？</div>
+          <div class="case-body">
+ 
+            傷者車禍後留下頭暈、健忘、睡眠障礙，原本只拿到零星醫療與少量和解金。
+            透過重新釐清後遺症等級與投保內容，重新規劃強制險與商業保險申請，讓整體理賠大幅提升。
+          </div>
+          <div class="case-more">👉 這類案件的關鍵：診斷書用語＋後遺症評估＋保單條款解讀</div>
+        </div>
+
+        <div class="card">
+          <div class="case-tag">學保．疾病理賠</div>
+          <div class="case-title">癲癇學童，從「不確定可以賠」到拿到救命金</div>
+          <div class="case-body">
+     
+        家庭經濟壓力大、孩子又長期就醫。原先家長以為學保只賠意外，
+            經過條款重讀與病例整理，協助順利申請到理賠，減輕家庭負擔。
+          </div>
+          <div class="case-more">👉 關鍵：疾病是否符合學保條款中的「殘廢／失能」或其他約定給付</div>
+        </div>
+
+        <div class="card">
+          <div class="case-tag">強制險．和解後追償</div>
+          <div class="case-title">車禍多年後，重新檢視強制險後遺症權益</div>
+          <div class="case-body">
+         
+    很多人以為「和解就結束了」，其實強制險後遺症在一定期間內仍可另案申請。
+            透過整理當年事故資料與醫療紀錄，協助當事人追回一筆本來以為拿不到的款項。
+          </div>
+          <div class="case-more">👉 關鍵：時效、後遺症認定、過去和解內容的界線</div>
+        </div>
+
+        <div class="card">
+          <div class="case-tag">工地職災．踝關節傷害</div>
+          <div class="case-title">外包司機遭堆高機壓傷腳踝，如何同時顧到工作與權益？</div>
+          <div class="case-body">
+            若貿然申請失能，可能影響職涯；不申請，又怕錯失時效。
+ 
+            透過分階段規劃：先以傷病給付與職災認定穩住生活，再評估失能與勞基法59條請求。
+          </div>
+          <div class="case-more">👉 關鍵：時機拿捏、醫療穩定期、與公司關係的取捨</div>
+        </div>
+
+        <div class="card">
+          <div class="case-tag">高薪低報．勞保與退休金</div>
+          <div class="case-title">實領八萬，投保三萬多，職災後能追回多少？</div>
+          <div class="case-body">
+            透過薪資證明、匯款紀錄、考勤等資料，補強「實際工資」的證據，
+     
+        從勞保給付、退休金6%提撥差額，到失業給付，一一盤點可以主張的項目。
+          </div>
+          <div class="case-more">👉 關鍵：證據力＋你願意承受的職場關係衝擊</div>
+        </div>
+
+        <div class="card">
+          <div class="case-tag">保險拒賠．條款爭議</div>
+          <div class="case-title">「既往病史未告知」就一定不能賠嗎？</div>
+          <div class="case-body">
+            很多拒賠信都長得很可怕，但內容不一定完全站得住腳。
+         
+    透過檢視投保當時的問卷、醫療紀錄與條款內容，判斷是否有爭取空間。
+          </div>
+          <div class="case-more">👉 關鍵：保險公司能否證明「重大」且「足以影響承保」的事實</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="classroom">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">CLASSROOM</div>
+        <h2 class="section-title">理賠小教室</h2>
+        <p class="section-subtitle">
+         
+  把拍成短影音的主題，也整理成文字讓你隨時複習。遇到狀況時，可以少走幾步冤枉路。
+        </p>
+      </div>
+
+      <div class="lesson-list">
+        <div class="lesson-item">
+          <div class="lesson-title">懶人包：發生職災時，一定要先搞懂的三件事</div>
+          <div class="lesson-meta">職災｜勞保｜就業保險</div>
+          <div class="lesson-body">
+            什麼叫「職業災害」？是不是只有在工地才算？上下班途中摔車算不算？
+            這篇會用白話告訴你：要先確認哪三個關鍵，再決定要往哪個單位申請。
+          </div>
+  
+       </div>
+
+        <div class="lesson-item">
+          <div class="lesson-title">車禍和解前，你至少要問自己的五個問題</div>
+          <div class="lesson-meta">車禍｜和解｜強制險</div>
+          <div class="lesson-body">
+            很多人是「先簽了再說」，結果過幾個月才發現後遺症越來越明顯。
+            這篇會教你：和解書裡哪些字眼要特別注意，以及什麼情況下「不要急著簽」。
+          </div>
+        </div>
+
+        <div class="lesson-item">
+ 
+          <div class="lesson-title">公司幫你高薪低報，發生事故時可以怎麼追？</div>
+          <div class="lesson-meta">勞保｜高薪低報｜退休金6%</div>
+          <div class="lesson-body">
+            很多人直到職災或離職才發現，自己多年來被低報投保薪資。
+            這篇會說明：有哪些證據可以用？追回來後，可能對你與公司關係造成哪些影響？
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+  
+     <div class="section-header">
+        <div class="eyebrow">CONTACT</div>
+        <h2 class="section-title">聯絡我們</h2>
+        <p class="section-subtitle">
+          不用先想好要問得很完整，只要把你目前的狀況、檢查報告或保單拍照給我看，我陪你一起整理。
+        </p>
+      </div>
+
+      <div class="contact-layout">
+        <div>
+          <div class="card">
+            <div class="card-title">聯絡資訊</div>
+     
+        <div class="contact-list">
+              <div><span class="contact-label">服務區域：</span>台灣北中南皆可線上諮詢，必要時可約實體見面</div>
+              <div><span class="contact-label">LINE：</span>ID: 0922388397</div>
+              <div><span class="contact-label">Email：</span>yourmail@example.com</div>
+              <div><span class="contact-label">備註：</span>案件內容與個資將嚴格保密，僅用於評估與爭取你應得的權益。</div>
+            </div>
+
+            <div class="contact-hint">
+   
+            ⚠️ 若你已經收到「拒賠」、「追討保險金」或「法院相關文件」，請務必附上照片或掃描檔，
+              才能更準確評估。
+            </div>
+
+            <div style="margin-top: 14px;">
+              <a class="btn btn-primary" href="https://line.me/ti/p/0922388397" target="_blank" rel="noopener">
+                立即用 LINE 聯絡
+           
+    </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <div class="card-title" style="margin-bottom: 10px;">線上初步資料填寫</div>
+          <form action="#" method="post" onsubmit="alert('這是示意表單，請依實際需求串接 Google 表單或後端系統。');
+return false;">
+            <div class="form-group">
+              <label class="form-label" for="name">您的稱呼</label>
+              <input class="form-control" id="name" name="name" placeholder="例：陳先生、林小姐" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact">聯絡方式（LINE / 手機 / Email）</label>
+      
+         <input class="form-control" id="contact" name="contact" placeholder="例：LINE ID、手機號碼或 Email" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="type">案件大方向</label>
+              <input class="form-control" id="type" name="type" placeholder="例：工地職災／車禍後遺症／學保／保險拒賠⋯" />
+            </div>
+
+            <div 
+class="form-group">
+              <label class="form-label" for="message">簡單說明發生了什麼事</label>
+              <textarea class="form-textarea" id="message" name="message" placeholder="可以先不用寫太多，至少寫出：何時、在哪裡、怎麼受傷／發病，目前最大的擔心是什麼。"></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">送出資料（示意）</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="floating-contact">
+    <a class="floating-btn line-btn" href="https://line.me/ti/p/0922388397" target="_blank" rel="noopener" title="LINE 線上諮詢">
+      L
+    </a>
+    <a class="floating-btn fb-btn" href="#" target="_blank" rel="noopener" title="Facebook 粉絲專頁">
+      f
+    </a>
+    <a class="floating-btn phone-btn" href="tel:0922388397" title="電話預約回電">
+      📞
+    </a>
+  </div>
+  <footer>
+   
+  <div class="container footer-row">
+      <div>© 2025 芳芳姐理賠導航員 All Rights Reserved.</div>
+      <div class="footer-links">
+        <a href="#about">關於我們</a>
+        <a href="#services">服務項目</a>
+        <a href="#cases">客戶案例</a>
+        <a href="#classroom">理賠小教室</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
