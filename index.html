@@ -42,13 +42,13 @@ color: inherit;
     img {
       max-width: 100%;
       display: block;
-}
+    }
 
     .container {
       max-width: 1120px;
       margin: 0 auto;
       padding: 0 16px;
-}
+    }
 
     /* NAVBAR */
     header {
@@ -58,20 +58,20 @@ top: 0;
       background: rgba(15,23,42,0.98);
       color: #fff;
       backdrop-filter: blur(10px);
-}
+    }
 
     .nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 12px 0;
-}
+    }
 
     .logo-wrap {
       display: flex;
       align-items: center;
       gap: 10px;
-}
+    }
 
     .logo-mark {
       width: 36px;
@@ -83,28 +83,28 @@ background: radial-gradient(circle at 30% 30%, #f97373, var(--accent));
       justify-content: center;
       font-weight: 700;
       font-size: 18px;
-}
+    }
 
     .logo-text-main {
       font-weight: 700;
       font-size: 18px;
-}
+    }
 
     .logo-text-sub {
       font-size: 12px;
       opacity: 0.8;
-}
+    }
 
     .nav-links {
       display: flex;
       gap: 18px;
       font-size: 14px;
-}
+    }
 
     .nav-links a {
       position: relative;
       padding-bottom: 2px;
-}
+    }
 
     .nav-links a::after {
       content: "";
@@ -115,20 +115,20 @@ width: 0;
       height: 2px;
       background: var(--accent);
       transition: width 0.2s ease;
-}
+    }
 
     .nav-links a:hover::after {
       width: 100%;
-}
+    }
 
     .nav-cta {
       display: none;
-}
+    }
 
     @media (min-width: 900px) {
       .nav-cta {
         display: flex;
-}
+      }
     }
 
     .btn {
@@ -165,7 +165,7 @@ color: #e5e7eb;
     .btn-outline:hover {
       border-color: #e5e7eb;
       background: rgba(31,41,55,0.8);
-}
+    }
 
     /* HERO */
     .hero {
@@ -184,7 +184,7 @@ grid-template-columns: 1.1fr;
     @media (min-width: 900px) {
       .hero-grid {
         grid-template-columns: 1.2fr 1fr;
-}
+      }
     }
 
     .hero-chip-row {
@@ -204,37 +204,37 @@ padding: 4px 10px;
       align-items: center;
       gap: 6px;
       background: rgba(15,23,42,0.8);
-}
+    }
 
     .chip-dot {
       width: 7px;
       height: 7px;
       border-radius: 999px;
       background: var(--accent);
-}
+    }
 
     .hero-title {
       font-size: 26px;
       line-height: 1.4;
       margin-bottom: 10px;
       font-weight: 800;
-}
+    }
 
     @media (min-width: 768px) {
       .hero-title {
         font-size: 32px;
-}
+      }
     }
 
     .hero-highlight {
       color: #f97373;
-}
+    }
 
     .hero-subtitle {
       font-size: 15px;
       color: #e5e7eb;
       margin-bottom: 18px;
-}
+    }
 
     .hero-bullets {
       display: grid;
@@ -248,11 +248,11 @@ color: #d1d5db;
       display: inline-flex;
       align-items: flex-start;
       gap: 6px;
-}
+    }
 
     .hero-bullets strong {
       color: #f9fafb;
-}
+    }
 
     .hero-cta-row {
       display: flex;
@@ -265,7 +265,7 @@ margin-bottom: 12px;
     .hero-note {
       font-size: 12px;
       color: #9ca3af;
-}
+    }
 
     .hero-card {
       background: radial-gradient(circle at top left, rgba(248,250,252,0.06), rgba(15,23,42,1));
@@ -298,16 +298,16 @@ color: #9ca3af;
     /* GENERIC SECTIONS */
     section {
       padding: 40px 0;
-}
+    }
 
     section:nth-of-type(even) {
       background: #ffffff;
-}
+    }
 
     .section-header {
       text-align: center;
       margin-bottom: 24px;
-}
+    }
 
     .eyebrow {
       font-size: 12px;
@@ -321,12 +321,12 @@ margin-bottom: 6px;
       font-size: 22px;
       font-weight: 700;
       margin-bottom: 4px;
-}
+    }
 
     .section-subtitle {
       font-size: 14px;
       color: var(--text-sub);
-}
+    }
 
     /* 4 保證 */
     .guarantee-grid {
@@ -337,7 +337,7 @@ gap: 16px;
     @media (min-width: 768px) {
       .guarantee-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
-}
+      }
     }
 
     .card {
@@ -346,7 +346,7 @@ gap: 16px;
 padding: 16px 16px 14px;
       box-shadow: var(--shadow-soft);
       border: 1px solid rgba(148,163,184,0.25);
-}
+    }
 
     .card-tag {
       display: inline-flex;
@@ -366,7 +366,7 @@ margin-bottom: 6px;
     .card-body {
       font-size: 13px;
       color: var(--text-sub);
-}
+    }
 
     /* 服務項目 */
     .service-layout {
@@ -390,18 +390,18 @@ gap: 10px;
     .service-item-title {
       font-weight: 600;
       margin-bottom: 2px;
-}
+    }
 
     .service-item-desc {
       font-size: 13px;
       color: var(--text-sub);
-}
+    }
 
     .service-note {
       font-size: 12px;
       color: var(--text-sub);
       margin-top: 10px;
-}
+    }
 
     .pill {
       display: inline-flex;
@@ -413,7 +413,7 @@ padding: 4px 10px;
       background: rgba(15,23,42,0.04);
       border: 1px dashed rgba(148,163,184,0.7);
       color: var(--text-sub);
-}
+    }
 
     /* 案例 */
     .case-grid {
@@ -424,7 +424,7 @@ gap: 16px;
     @media (min-width: 768px) {
       .case-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
-}
+      }
     }
 
     .case-tag {
@@ -435,24 +435,24 @@ border-radius: 999px;
       color: #1d4ed8;
       display: inline-block;
       margin-bottom: 4px;
-}
+    }
 
     .case-title {
       font-size: 14px;
       font-weight: 600;
       margin-bottom: 4px;
-}
+    }
 
     .case-body {
       font-size: 13px;
       color: var(--text-sub);
       margin-bottom: 6px;
-}
+    }
 
     .case-more {
       font-size: 12px;
       color: var(--accent);
-}
+    }
 
     /* 小教室 */
     .lesson-list {
@@ -483,7 +483,7 @@ margin-bottom: 4px;
     .lesson-body {
       font-size: 13px;
       color: var(--text-sub);
-}
+    }
 
     /* 聯絡我們 */
     .contact-layout {
@@ -513,7 +513,7 @@ margin-right: 6px;
     .contact-hint {
       font-size: 12px;
       color: var(--text-sub);
-}
+    }
 
     .contact-form {
       background: #ffffff;
@@ -525,14 +525,14 @@ border: 1px solid rgba(148,163,184,0.35);
 
     .form-group {
       margin-bottom: 10px;
-}
+    }
 
     .form-label {
       display: block;
       font-size: 13px;
       margin-bottom: 4px;
       color: var(--text-sub);
-}
+    }
 
     .form-control,
     .form-textarea {
@@ -590,19 +590,19 @@ flex-wrap: wrap;
     .footer-links a {
       color: #e5e7eb;
       opacity: 0.8;
-}
+    }
 
     /* 小螢幕調整 */
     @media (max-width: 768px) {
       .nav-links {
         display: none;
-}
+      }
     }
 
     html {
       scroll-behavior: smooth;
-}
-    
+    }
+
     /* === 新增浮動聯絡按鈕 CSS === */
     .floating-contact {
       position: fixed;
@@ -669,8 +669,7 @@ flex-wrap: wrap;
 
       <nav class="nav-links">
         <a href="#about">關於我們</a>
-        <a 
-href="#services">服務項目</a>
+        <a href="#services">服務項目</a>
         <a href="#cases">客戶案例</a>
         <a href="#classroom">理賠小教室</a>
         <a href="#contact">聯絡我們</a>
@@ -686,7 +685,7 @@ href="#services">服務項目</a>
     <div class="container hero-grid">
       <div>
         <div class="hero-chip-row">
-         
+
   <div class="chip">
             <span class="chip-dot"></span>
             職災．車禍．學保．保險爭議
@@ -711,16 +710,15 @@ class="hero-title">
 
         <div class="hero-bullets">
           <span>✅ <strong>沒賠到錢不收費：</strong>申請未過、不理賠，你不用付任何費用。</span>
-  
-         <span>✅ <strong>案件全局控管：</strong>職災＋車禍＋保險＋勞資爭議，一次幫你串起來。</span>
+          <span>✅ <strong>案件全局控管：</strong>職災＋車禍＋保險＋勞資爭議，一次幫你串起來。</span>
           <span>✅ <strong>條款講人話：：</strong>把艱深的保單條款翻成你聽得懂的白話。</span>
         </div>
 
         <div class="hero-cta-row">
-          <a class="btn btn-primary" href="https://line.me/ti/p/0922388397" target="_blank" rel="noopener">
+          <a class="btn btn-primary" href="https://line.me/ti/p/~0922388397" target="_blank" rel="noopener">
             加入 LINE 線上諮詢
           </a>
-       
+
     <a class="btn btn-outline" href="#contact">我要預約回電</a>
         </div>
 
@@ -734,7 +732,7 @@ class="hero-title">
         <div class="hero-stat-row">
           <div>
             <div class="hero-stat-label">職災案件</div>
-     
+
         <div>工地職災、外包司機壓傷、長期勞損、未加保勞保⋯⋯</div>
           </div>
           <div>
@@ -744,7 +742,7 @@ class="hero-title">
           <div>
             <div class="hero-stat-label">其他爭議</div>
             <div>學保／托嬰意外、疾病理賠遭拒、保單條款認定爭議等</div>
-   
+
         </div>
         </div>
       </div>
@@ -761,7 +759,7 @@ class="hero-title">
         </p>
       </div>
 
-   
+
     <div class="guarantee-grid">
         <div class="card">
           <div class="card-tag">01 安心</div>
@@ -773,7 +771,7 @@ class="hero-title">
         </div>
 
         <div class="card">
-  
+
          <div class="card-tag">02 專業</div>
           <div class="card-title">職災＋車禍＋保險的交叉判讀</div>
           <div class="card-body">
@@ -784,7 +782,7 @@ class="hero-title">
 
         <div class="card">
           <div class="card-tag">03 服務</div>
-     
+
       <div class="card-title">說人話，把選項攤開來給你選</div>
           <div class="card-body">
             不會只丟一堆法條，而是用白話跟你說每一種做法的優缺點，
@@ -795,7 +793,7 @@ class="hero-title">
         <div class="card">
           <div class="card-tag">04 團隊</div>
           <div class="card-title">跨領域合作，讓你不再自己瞎猜</div>
-         
+
   <div class="card-body">
             視案件需要，協調醫師、會計、律師等專業伙伴，
             讓你不用一個人 Google 到頭昏眼花，還不確定自己有沒有做對。
@@ -810,7 +808,7 @@ class="hero-title">
       <div class="section-header">
         <div class="eyebrow">SERVICES</div>
         <h2 class="section-title">服務項目</h2>
-     
+
     <p class="section-subtitle">
           不只是「代辦」，而是先幫你看清楚權益，再一起決定策略的「理賠導航」。
         </p>
@@ -864,8 +862,8 @@ class="hero-title">
             ✅ 服務採「無預收、結果論」：理賠金沒進你帳戶，不會跟你收費。<br />
             ✅ 有些案件只需要諮詢與文件校對，也可採「單次諮詢」方式進行。
           </div>
-   
-      </div>
+
+        </div>
 
         <div>
           <div class="card">
@@ -874,7 +872,7 @@ class="hero-title">
             <div class="card-body">
               <ul style="padding-left: 16px; margin-top: 6px;">
                 <li>第一步：保留所有醫療單據、診斷書、影像資料（X 光、MRI）</li>
-  
+
                <li>第二步：先諮詢再簽任何和解書、切結書、聲明書</li>
                 <li>第三步：釐清「勞保＋商業保險＋肇事責任」的交集與順序</li>
               </ul>
@@ -887,14 +885,14 @@ class="hero-title">
             </div>
           </div>
         </div>
-      </div>  
+      </div>
     </div>
   </section>
 
   <section id="cases">
     <div class="container">
       <div class="section-header">
-     
+
     <div class="eyebrow">CASES</div>
         <h2 class="section-title">真實案件剪影</h2>
         <p class="section-subtitle">
@@ -907,7 +905,7 @@ class="hero-title">
           <div class="case-tag">車禍腦傷・後遺症</div>
           <div class="case-title">同一張診斷書，理賠金從 20 萬變 300 萬？</div>
           <div class="case-body">
- 
+
             傷者車禍後留下頭暈、健忘、睡眠障礙，原本只拿到零星醫療與少量和解金。
             透過重新釐清後遺症等級與投保內容，重新規劃強制險與商業保險申請，讓整體理賠大幅提升。
           </div>
@@ -918,7 +916,7 @@ class="hero-title">
           <div class="case-tag">學保．疾病理賠</div>
           <div class="case-title">癲癇學童，從「不確定可以賠」到拿到救命金</div>
           <div class="case-body">
-     
+
         家庭經濟壓力大、孩子又長期就醫。原先家長以為學保只賠意外，
             經過條款重讀與病例整理，協助順利申請到理賠，減輕家庭負擔。
           </div>
@@ -929,7 +927,7 @@ class="hero-title">
           <div class="case-tag">強制險．和解後追償</div>
           <div class="case-title">車禍多年後，重新檢視強制險後遺症權益</div>
           <div class="case-body">
-         
+
     很多人以為「和解就結束了」，其實強制險後遺症在一定期間內仍可另案申請。
             透過整理當年事故資料與醫療紀錄，協助當事人追回一筆本來以為拿不到的款項。
           </div>
@@ -941,7 +939,7 @@ class="hero-title">
           <div class="case-title">外包司機遭堆高機壓傷腳踝，如何同時顧到工作與權益？</div>
           <div class="case-body">
             若貿然申請失能，可能影響職涯；不申請，又怕錯失時效。
- 
+
             透過分階段規劃：先以傷病給付與職災認定穩住生活，再評估失能與勞基法59條請求。
           </div>
           <div class="case-more">👉 關鍵：時機拿捏、醫療穩定期、與公司關係的取捨</div>
@@ -952,7 +950,7 @@ class="hero-title">
           <div class="case-title">實領八萬，投保三萬多，職災後能追回多少？</div>
           <div class="case-body">
             透過薪資證明、匯款紀錄、考勤等資料，補強「實際工資」的證據，
-     
+
         從勞保給付、退休金6%提撥差額，到失業給付，一一盤點可以主張的項目。
           </div>
           <div class="case-more">👉 關鍵：證據力＋你願意承受的職場關係衝擊</div>
@@ -963,7 +961,7 @@ class="hero-title">
           <div class="case-title">「既往病史未告知」就一定不能賠嗎？</div>
           <div class="case-body">
             很多拒賠信都長得很可怕，但內容不一定完全站得住腳。
-         
+
     透過檢視投保當時的問卷、醫療紀錄與條款內容，判斷是否有爭取空間。
           </div>
           <div class="case-more">👉 關鍵：保險公司能否證明「重大」且「足以影響承保」的事實</div>
@@ -978,7 +976,7 @@ class="hero-title">
         <div class="eyebrow">CLASSROOM</div>
         <h2 class="section-title">理賠小教室</h2>
         <p class="section-subtitle">
-         
+
   把拍成短影音的主題，也整理成文字讓你隨時複習。遇到狀況時，可以少走幾步冤枉路。
         </p>
       </div>
@@ -991,7 +989,7 @@ class="hero-title">
             什麼叫「職業災害」？是不是只有在工地才算？上下班途中摔車算不算？
             這篇會用白話告訴你：要先確認哪三個關鍵，再決定要往哪個單位申請。
           </div>
-  
+
        </div>
 
         <div class="lesson-item">
@@ -1004,7 +1002,7 @@ class="hero-title">
         </div>
 
         <div class="lesson-item">
- 
+
           <div class="lesson-title">公司幫你高薪低報，發生事故時可以怎麼追？</div>
           <div class="lesson-meta">勞保｜高薪低報｜退休金6%</div>
           <div class="lesson-body">
@@ -1018,7 +1016,7 @@ class="hero-title">
 
   <section id="contact">
     <div class="container">
-  
+
      <div class="section-header">
         <div class="eyebrow">CONTACT</div>
         <h2 class="section-title">聯絡我們</h2>
@@ -1031,24 +1029,24 @@ class="hero-title">
         <div>
           <div class="card">
             <div class="card-title">聯絡資訊</div>
-     
+
         <div class="contact-list">
               <div><span class="contact-label">服務區域：</span>台灣北中南皆可線上諮詢，必要時可約實體見面</div>
-              <div><span class="contact-label">LINE：</span>ID: 0922388397</div>
-              <div><span class="contact-label">Email：</span>yourmail@example.com</div>
+              <div><span class="contact-label">LINE：</span>ID: 0922388397 (或掃描官方 QR Code)</div>
+              <div><span class="contact-label">Email：</span>serena0229@gmail.com</div>
               <div><span class="contact-label">備註：</span>案件內容與個資將嚴格保密，僅用於評估與爭取你應得的權益。</div>
             </div>
 
             <div class="contact-hint">
-   
+
             ⚠️ 若你已經收到「拒賠」、「追討保險金」或「法院相關文件」，請務必附上照片或掃描檔，
               才能更準確評估。
             </div>
 
             <div style="margin-top: 14px;">
-              <a class="btn btn-primary" href="https://line.me/ti/p/0922388397" target="_blank" rel="noopener">
+              <a class="btn btn-primary" href="https://line.me/ti/p/~0922388397" target="_blank" rel="noopener">
                 立即用 LINE 聯絡
-           
+
     </a>
             </div>
           </div>
@@ -1065,7 +1063,7 @@ return false;">
 
             <div class="form-group">
               <label class="form-label" for="contact">聯絡方式（LINE / 手機 / Email）</label>
-      
+
          <input class="form-control" id="contact" name="contact" placeholder="例：LINE ID、手機號碼或 Email" />
             </div>
 
@@ -1088,7 +1086,7 @@ class="form-group">
   </section>
 
   <div class="floating-contact">
-    <a class="floating-btn line-btn" href="https://line.me/ti/p/0922388397" target="_blank" rel="noopener" title="LINE 線上諮詢">
+    <a class="floating-btn line-btn" href="https://line.me/ti/p/~0922388397" target="_blank" rel="noopener" title="LINE 線上諮詢">
       L
     </a>
     <a class="floating-btn fb-btn" href="#" target="_blank" rel="noopener" title="Facebook 粉絲專頁">
@@ -1099,7 +1097,7 @@ class="form-group">
     </a>
   </div>
   <footer>
-   
+
   <div class="container footer-row">
       <div>© 2025 芳芳姐理賠導航員 All Rights Reserved.</div>
       <div class="footer-links">
@@ -1112,3 +1110,4 @@ class="form-group">
   </footer>
 </body>
 </html>
+
