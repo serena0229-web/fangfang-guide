@@ -1,26 +1,26 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
   <title>芳芳姐理賠導航員｜職災．車禍．學保．保險爭議 一站式統包服務</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="職災、車禍、學保、保險爭議，一通電話，芳芳姐幫你統籌處理勞保、商業保險、強制險、勞資爭議，沒賠到錢不收費。">
-  
+
+  <!-- Icon 套件：LINE / TikTok / Phone 都用這個 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
     :root {
-      --primary: #1f2937;
-      /* 深藍 */
+      --primary: #020617;      /* 深藍主色 */
       --primary-light: #111827;
-      --accent: #e11d48;
-      /* 紅點 */
+      --accent: #e11d48;       /* 品牌紅點 */
+      --accent-soft: #fecaca;
       --bg: #f3f4f6;
       --card-bg: #ffffff;
-      --text-main: #111827;
+      --text-main: #020617;
       --text-sub: #4b5563;
-      --radius-lg: 16px;
-      --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.12);
+      --radius-lg: 18px;
+      --shadow-soft: 0 14px 40px rgba(15, 23, 42, 0.16);
     }
 
     * {
@@ -31,11 +31,10 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
-      background: var(--bg);
+      background: radial-gradient(circle at top, #e5e7eb 0, #f9fafb 40%, #e5e7eb 100%);
       color: var(--text-main);
-      /* 【優化】設置更大的基底字體 */
       font-size: 17px;
-      line-height: 1.7;
+      line-height: 1.8;
     }
 
     a {
@@ -48,6 +47,10 @@
       display: block;
     }
 
+    h1, h2, h3, h4 {
+      letter-spacing: 0.02em;
+    }
+
     .container {
       max-width: 1120px;
       margin: 0 auto;
@@ -58,17 +61,18 @@
     header {
       position: sticky;
       top: 0;
-      z-index: 50;
+      z-index: 80;
       background: rgba(15,23,42,0.98);
       color: #fff;
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 1px 0 rgba(15,23,42,0.65);
     }
 
     .nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 12px 0;
+      padding: 10px 0;
     }
 
     .logo-wrap {
@@ -78,43 +82,47 @@
     }
 
     .logo-mark {
-      width: 36px;
-      height: 36px;
+      width: 38px;
+      height: 38px;
       border-radius: 999px;
-      background: radial-gradient(circle at 30% 30%, #f97373, var(--accent));
+      background: radial-gradient(circle at 25% 25%, var(--accent-soft), var(--accent));
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 700;
+      font-weight: 800;
       font-size: 18px;
+      color: #f9fafb;
+      box-shadow: 0 8px 18px rgba(248,113,113,0.45);
     }
 
     .logo-text-main {
-      font-weight: 700;
+      font-weight: 800;
       font-size: 18px;
     }
 
     .logo-text-sub {
-      font-size: 14px; /* 放大 */
-      opacity: 0.8;
+      font-size: 13px;
+      opacity: 0.85;
     }
 
     .nav-links {
       display: flex;
-      gap: 18px;
-      font-size: 16px; /* 放大 */
+      gap: 20px;
+      font-size: 15px;
     }
 
     .nav-links a {
       position: relative;
       padding-bottom: 2px;
+      opacity: 0.9;
+      font-weight: 500;
     }
 
     .nav-links a::after {
       content: "";
       position: absolute;
       left: 0;
-      bottom: -2px;
+      bottom: -4px;
       width: 0;
       height: 2px;
       background: var(--accent);
@@ -123,6 +131,10 @@
 
     .nav-links a:hover::after {
       width: 100%;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
     }
 
     .nav-cta {
@@ -139,55 +151,56 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 10px 18px; /* 放大按鈕填充 */
+      padding: 11px 20px;
       border-radius: 999px;
-      font-size: 16px; /* 放大 */
+      font-size: 15px;
       border: 1px solid transparent;
       cursor: pointer;
       transition: all 0.2s ease;
       gap: 6px;
       white-space: nowrap;
+      font-weight: 600;
     }
 
     .btn-primary {
-      background: var(--accent);
+      background: linear-gradient(135deg, #fb7185, var(--accent));
       color: #fff;
-      box-shadow: 0 8px 18px rgba(220, 38, 38, 0.35);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
       box-shadow: 0 10px 24px rgba(220, 38, 38, 0.45);
     }
 
+    .btn-primary:hover {
+      transform: translateY(-1px) translateZ(0);
+      box-shadow: 0 14px 30px rgba(220, 38, 38, 0.6);
+    }
+
     .btn-outline {
-      border-color: rgba(156,163,175,0.6);
+      border-color: rgba(156,163,175,0.7);
       color: #e5e7eb;
       background: transparent;
     }
 
     .btn-outline:hover {
-      border-color: #e5e7eb;
-      background: rgba(31,41,55,0.8);
+      border-color: #f9fafb;
+      background: rgba(31,41,55,0.85);
     }
 
     /* HERO */
     .hero {
-      background: radial-gradient(circle at top left, #1f2937 0, #020617 45%, #020617 100%);
+      background: radial-gradient(circle at top left, #111827 0, #020617 52%, #020617 100%);
       color: #fff;
-      padding: 50px 0 66px; /* 放大 padding */
+      padding: 64px 0 84px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr;
-      gap: 28px;
+      grid-template-columns: minmax(0, 1.25fr);
+      gap: 32px;
       align-items: center;
     }
 
     @media (min-width: 900px) {
       .hero-grid {
-        grid-template-columns: 1.2fr 1fr;
+        grid-template-columns: 1.45fr 1fr;
       }
     }
 
@@ -196,18 +209,19 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 10px;
-      margin-bottom: 14px;
+      margin-bottom: 20px;
     }
 
     .chip {
-      font-size: 14px; /* 放大 */
+      font-size: 13px;
       padding: 4px 12px;
       border-radius: 999px;
-      border: 1px solid rgba(248,250,252,0.2);
+      border: 1px solid rgba(248,250,252,0.16);
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: rgba(15,23,42,0.8);
+      background: rgba(15,23,42,0.85);
+      color: #e5e7eb;
     }
 
     .chip-dot {
@@ -215,36 +229,38 @@
       height: 7px;
       border-radius: 999px;
       background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(248,113,113,0.35);
     }
 
     .hero-title {
-      font-size: 30px; /* 放大 */
-      line-height: 1.4;
-      margin-bottom: 12px;
+      font-size: 32px;
+      line-height: 1.35;
+      margin-bottom: 14px;
       font-weight: 800;
     }
 
     @media (min-width: 768px) {
       .hero-title {
-        font-size: 40px; /* 放大 */
+        font-size: 40px;
       }
     }
 
     .hero-highlight {
-      color: #f97373;
+      color: #fb7185;
     }
 
     .hero-subtitle {
-      font-size: 18px; /* 放大 */
+      font-size: 18px;
       color: #e5e7eb;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
+      opacity: 0.96;
     }
 
     .hero-bullets {
       display: grid;
       gap: 8px;
-      font-size: 16px; /* 放大 */
-      margin-bottom: 20px;
+      font-size: 15px;
+      margin-bottom: 22px;
       color: #d1d5db;
     }
 
@@ -256,6 +272,7 @@
 
     .hero-bullets strong {
       color: #f9fafb;
+      font-weight: 700;
     }
 
     .hero-cta-row {
@@ -267,20 +284,20 @@
     }
 
     .hero-note {
-      font-size: 14px; /* 放大 */
+      font-size: 13px;
       color: #9ca3af;
     }
 
     .hero-card {
-      background: radial-gradient(circle at top left, rgba(248,250,252,0.06), rgba(15,23,42,1));
-      border-radius: 24px;
-      border: 1px solid rgba(148,163,184,0.3);
-      padding: 18px 20px;
+      background: radial-gradient(circle at top left, rgba(248,250,252,0.1), rgba(15,23,42,1));
+      border-radius: 22px;
+      border: 1px solid rgba(148,163,184,0.55);
+      padding: 20px 22px;
       box-shadow: var(--shadow-soft);
     }
 
     .hero-card-title {
-      font-size: 16px; /* 放大 */
+      font-size: 15px;
       margin-bottom: 10px;
       color: #e5e7eb;
       font-weight: 600;
@@ -290,52 +307,84 @@
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
-      font-size: 15px; /* 放大 */
-      color: #cbd5f5;
+      font-size: 14px;
+      color: #e5e7eb;
     }
 
     .hero-stat-label {
-      font-size: 13px; /* 放大 */
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
       color: #9ca3af;
+      margin-bottom: 3px;
+      font-weight: 600;
     }
 
-    /* GENERIC SECTIONS */
+    /* GENERIC SECTIONS + 背景對比 */
     section {
-      padding: 50px 0; /* 放大 padding */
+      padding: 60px 0;
     }
 
-    section:nth-of-type(even) {
+    #about {
+      background: #f9fafb;
+    }
+    #services {
       background: #ffffff;
+    }
+    #cases {
+      background: #f3f4f6;
+    }
+    #classroom {
+      background: #ffffff;
+    }
+    #contact {
+      background: #f9fafb;
+      border-top: 1px solid #e5e7eb;
     }
 
     .section-header {
       text-align: center;
-      margin-bottom: 30px; /* 放大 margin */
+      margin-bottom: 36px;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .eyebrow {
-      font-size: 14px; /* 放大 */
-      letter-spacing: 0.16em;
+      font-size: 13px;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      font-weight: 700;
     }
 
     .section-title {
-      font-size: 26px; /* 放大 */
-      font-weight: 700;
-      margin-bottom: 6px;
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 8px;
     }
 
     .section-subtitle {
-      font-size: 17px; /* 放大 */
+      font-size: 16px;
       color: var(--text-sub);
+    }
+
+    .section-header::after {
+      content: "";
+      display: block;
+      width: 64px;
+      height: 3px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), #fb7185);
+      margin: 18px auto 0;
+      opacity: 0.9;
     }
 
     /* 4 保證 */
     .guarantee-grid {
       display: grid;
-      gap: 20px; /* 放大 gap */
+      gap: 22px;
     }
 
     @media (min-width: 768px) {
@@ -347,35 +396,59 @@
     .card {
       background: var(--card-bg);
       border-radius: var(--radius-lg);
-      padding: 20px 20px 18px; /* 放大 padding */
+      padding: 20px 20px 18px;
       box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(148,163,184,0.25);
+      border: 1px solid rgba(148,163,184,0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      border-top: 3px solid rgba(248,113,113,0.8);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      box-shadow: 0 18px 40px rgba(15,23,42,0.18);
     }
 
     .card-tag {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      font-size: 14px; /* 放大 */
+      font-size: 13px;
       color: var(--accent);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
+      font-weight: 700;
     }
 
     .card-title {
-      font-size: 20px; /* 放大 */
-      font-weight: 600;
-      margin-bottom: 8px;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 6px;
     }
 
     .card-body {
-      font-size: 16px; /* 放大 */
+      font-size: 15px;
       color: var(--text-sub);
     }
 
     /* 服務項目 */
     .service-layout {
       display: grid;
-      gap: 30px; /* 放大 gap */
+      gap: 32px;
     }
 
     @media (min-width: 900px) {
@@ -387,43 +460,43 @@
 
     .service-list {
       display: grid;
-      gap: 14px; /* 放大 gap */
-      font-size: 16px; /* 放大 */
+      gap: 16px;
+      font-size: 15px;
     }
 
     .service-item-title {
-      font-weight: 600;
-      font-size: 18px; /* 放大 */
-      margin-bottom: 4px;
+      font-weight: 700;
+      font-size: 17px;
+      margin-bottom: 3px;
     }
 
     .service-item-desc {
-      font-size: 16px; /* 放大 */
+      font-size: 15px;
       color: var(--text-sub);
     }
 
     .service-note {
-      font-size: 14px; /* 放大 */
+      font-size: 14px;
       color: var(--text-sub);
-      margin-top: 14px;
+      margin-top: 16px;
     }
 
     .pill {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      font-size: 13px; /* 放大 */
+      font-size: 13px;
       padding: 5px 12px;
       border-radius: 999px;
-      background: rgba(15,23,42,0.04);
-      border: 1px dashed rgba(148,163,184,0.7);
+      background: rgba(15,23,42,0.02);
+      border: 1px dashed rgba(148,163,184,0.9);
       color: var(--text-sub);
     }
 
     /* 案例 */
     .case-grid {
       display: grid;
-      gap: 20px; /* 放大 gap */
+      gap: 22px;
     }
 
     @media (min-width: 768px) {
@@ -433,67 +506,71 @@
     }
 
     .case-tag {
-      font-size: 13px; /* 放大 */
+      font-size: 12px;
       padding: 3px 10px;
       border-radius: 999px;
       background: rgba(37,99,235,0.09);
       color: #1d4ed8;
       display: inline-block;
       margin-bottom: 6px;
+      font-weight: 600;
     }
 
     .case-title {
-      font-size: 18px; /* 放大 */
-      font-weight: 600;
+      font-size: 17px;
+      font-weight: 700;
       margin-bottom: 6px;
     }
 
     .case-body {
-      font-size: 16px; /* 放大 */
+      font-size: 15px;
       color: var(--text-sub);
       margin-bottom: 8px;
     }
 
     .case-more {
-      font-size: 14px; /* 放大 */
+      font-size: 14px;
       color: var(--accent);
+      font-weight: 500;
     }
 
     /* 小教室 */
     .lesson-list {
       display: grid;
-      gap: 16px; /* 放大 gap */
-      font-size: 16px; /* 放大 */
+      gap: 18px;
+      font-size: 15px;
     }
 
     .lesson-item {
-      padding: 16px 18px; /* 放大 padding */
-      border-radius: 12px;
+      padding: 16px 18px;
+      border-radius: 14px;
       background: #f9fafb;
       border: 1px solid rgba(209,213,219,0.9);
     }
 
     .lesson-title {
-      font-size: 18px; /* 放大 */
-      font-weight: 600;
-      margin-bottom: 6px;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 4px;
     }
 
     .lesson-meta {
-      font-size: 13px; /* 放大 */
+      font-size: 12px;
       color: var(--text-sub);
-      margin-bottom: 6px;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
     }
 
     .lesson-body {
-      font-size: 16px; /* 放大 */
+      font-size: 15px;
       color: var(--text-sub);
     }
 
     /* 聯絡我們 */
     .contact-layout {
       display: grid;
-      gap: 30px; /* 放大 gap */
+      gap: 32px;
     }
 
     @media (min-width: 900px) {
@@ -504,26 +581,26 @@
     }
 
     .contact-list {
-      font-size: 17px; /* 放大 */
+      font-size: 16px;
       display: grid;
       gap: 10px;
       margin: 12px 0 20px;
     }
 
     .contact-label {
-      font-weight: 600;
-      margin-right: 6px;
+      font-weight: 700;
+      margin-right: 4px;
     }
 
     .contact-hint {
-      font-size: 15px; /* 放大 */
+      font-size: 14px;
       color: var(--text-sub);
     }
 
     .contact-form {
       background: #ffffff;
       border-radius: var(--radius-lg);
-      padding: 20px; /* 放大 padding */
+      padding: 20px;
       box-shadow: var(--shadow-soft);
       border: 1px solid rgba(148,163,184,0.35);
     }
@@ -534,21 +611,22 @@
 
     .form-label {
       display: block;
-      font-size: 15px; /* 放大 */
+      font-size: 14px;
       margin-bottom: 6px;
       color: var(--text-sub);
+      font-weight: 600;
     }
 
     .form-control,
     .form-textarea {
       width: 100%;
-      padding: 10px 12px; /* 放大 padding */
+      padding: 10px 12px;
       border-radius: 10px;
       border: 1px solid rgba(148,163,184,0.9);
-      font-size: 15px; /* 放大 */
+      font-size: 14px;
       font-family: inherit;
       outline: none;
-      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
       background: #f9fafb;
     }
 
@@ -568,8 +646,8 @@
     footer {
       background: #020617;
       color: #9ca3af;
-      padding: 20px 0 22px; /* 放大 padding */
-      font-size: 14px; /* 放大 */
+      padding: 20px 0 22px;
+      font-size: 13px;
     }
 
     .footer-row {
@@ -595,6 +673,11 @@
     .footer-links a {
       color: #e5e7eb;
       opacity: 0.8;
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      opacity: 1;
     }
 
     /* 小螢幕調整 */
@@ -602,80 +685,105 @@
       .nav-links {
         display: none;
       }
+
+      .hero {
+        padding-top: 52px;
+      }
     }
 
     html {
       scroll-behavior: smooth;
     }
 
-    /* === 浮動聯絡按鈕 CSS === */
+    /* === 浮動聯絡按鈕：右上角＋呼吸動畫 === */
     .floating-contact {
       position: fixed;
       right: 16px;
-      bottom: 60px; /* 避免與 footer 重疊 */
+      top: 82px;   /* 在導覽列下方一點 */
       z-index: 1000;
       display: grid;
-      gap: 12px;
+      gap: 10px;
     }
 
     .floating-btn {
-      width: 52px;
-      height: 52px;
+      width: 50px;
+      height: 50px;
       border-radius: 999px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #fff;
       font-weight: 700;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
       cursor: pointer;
+      opacity: 0.96;
+      /* 共用呼吸動畫 */
+      animation: float-pulse 1.9s ease-in-out infinite;
     }
 
     .floating-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.45);
+      opacity: 1;
     }
 
     .line-btn {
       background: #07c160; /* LINE Green */
+      animation-delay: 0s;
     }
     .line-btn .fab.fa-line {
-        font-size: 28px; /* 讓 LINE 圖示稍微大一點 */
+      font-size: 26px;
     }
 
-    /* TikTok 按鈕（取代原本 Facebook） */
     .tiktok-btn {
-      background: #000000; /* TikTok 黑底 */
+      background: #000000;
+      animation-delay: 0.18s;
     }
     .tiktok-btn .fab.fa-tiktok {
-        font-size: 28px; /* 讓 TikTok 圖示稍微大一點 */
+      font-size: 26px;
     }
 
     .phone-btn {
-      background: #fbc02d; /* Phone/Call Yellow */
+      background: #fbbf24; /* 黃色電話 */
+      animation-delay: 0.36s;
     }
     .phone-btn .fas.fa-phone-alt {
-        font-size: 24px; /* 讓電話圖示稍微大一點 */
+      font-size: 22px;
     }
 
     @media (max-width: 768px) {
-        /* 在手機上可以讓按鈕小一點 */
-        .floating-btn {
-            width: 44px;
-            height: 44px;
-        }
-        .line-btn .fab.fa-line {
-            font-size: 24px;
-        }
-        .tiktok-btn .fab.fa-tiktok {
-            font-size: 24px;
-        }
-        .phone-btn .fas.fa-phone-alt {
-            font-size: 20px;
-        }
+      .floating-contact {
+        top: 70px;
+        right: 10px;
+        gap: 8px;
+      }
+      .floating-btn {
+        width: 44px;
+        height: 44px;
+      }
+      .line-btn .fab.fa-line,
+      .tiktok-btn .fab.fa-tiktok {
+        font-size: 22px;
+      }
+      .phone-btn .fas.fa-phone-alt {
+        font-size: 20px;
+      }
     }
-    /* === 浮動聯絡按鈕 CSS 結束 === */
+
+    @keyframes float-pulse {
+      0%, 100% {
+        transform: translateY(0) scale(1);
+        box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+        opacity: 0.9;
+      }
+      50% {
+        transform: translateY(-3px) scale(1.06);
+        box-shadow: 0 10px 26px rgba(0,0,0,0.5);
+        opacity: 1;
+      }
+    }
+    /* === 浮動聯絡按鈕 結束 === */
   </style>
 </head>
 <body>
@@ -1088,7 +1196,7 @@
     </div>
   </section>
 
-  <!-- 浮動聯絡按鈕：LINE / TikTok / 電話 -->
+  <!-- 浮動聯絡按鈕：LINE / TikTok / 電話（右上角＋呼吸動畫） -->
   <div class="floating-contact">
     <a class="floating-btn line-btn" href="https://line.me/ti/p/~0922388397" target="_blank" rel="noopener" title="LINE 線上諮詢">
       <i class="fab fa-line"></i>
@@ -1114,5 +1222,3 @@
   </footer>
 </body>
 </html>
-
-
