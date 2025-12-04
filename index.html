@@ -15,7 +15,9 @@
       --primary-light: #111827;
       --accent: #e11d48;       /* 品牌紅點 */
       --accent-soft: #fecaca;
-      --bg: #f3f4f6;
+      --accent-blue: #38bdf8;
+      --accent-purple: #818cf8;
+      --bg: #eef2ff;
       --card-bg: #ffffff;
       --text-main: #020617;
       --text-sub: #4b5563;
@@ -31,7 +33,10 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
-      background: radial-gradient(circle at top, #e5e7eb 0, #f9fafb 40%, #e5e7eb 100%);
+      background:
+        radial-gradient(circle at 0% 0%, rgba(248, 113, 113, 0.18) 0, transparent 55%),
+        radial-gradient(circle at 100% 100%, rgba(56, 189, 248, 0.16) 0, transparent 55%),
+        linear-gradient(180deg, #eef2ff 0, #f9fafb 55%, #e5e7eb 100%);
       color: var(--text-main);
       font-size: 17px;
       line-height: 1.8;
@@ -62,7 +67,7 @@
       position: sticky;
       top: 0;
       z-index: 80;
-      background: rgba(15,23,42,0.98);
+      background: rgba(15,23,42,0.96);
       color: #fff;
       backdrop-filter: blur(16px);
       box-shadow: 0 1px 0 rgba(15,23,42,0.65);
@@ -82,17 +87,19 @@
     }
 
     .logo-mark {
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       border-radius: 999px;
-      background: radial-gradient(circle at 25% 25%, var(--accent-soft), var(--accent));
+      background:
+        radial-gradient(circle at 25% 25%, #fef2f2, var(--accent)),
+        radial-gradient(circle at 75% 90%, rgba(56,189,248,0.7), transparent 55%);
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 800;
       font-size: 18px;
       color: #f9fafb;
-      box-shadow: 0 8px 18px rgba(248,113,113,0.45);
+      box-shadow: 0 10px 22px rgba(248,113,113,0.55);
     }
 
     .logo-text-main {
@@ -102,7 +109,7 @@
 
     .logo-text-sub {
       font-size: 13px;
-      opacity: 0.85;
+      opacity: 0.9;
     }
 
     .nav-links {
@@ -125,8 +132,8 @@
       bottom: -4px;
       width: 0;
       height: 2px;
-      background: var(--accent);
-      transition: width 0.2s ease;
+      background: linear-gradient(90deg, var(--accent), var(--accent-blue));
+      transition: width 0.18s ease;
     }
 
     .nav-links a:hover::after {
@@ -186,9 +193,49 @@
 
     /* HERO */
     .hero {
+      position: relative;
+      overflow: hidden;
       background: radial-gradient(circle at top left, #111827 0, #020617 52%, #020617 100%);
       color: #fff;
-      padding: 64px 0 84px;
+      padding: 68px 0 88px;
+      box-shadow: 0 22px 40px rgba(15,23,42,0.65);
+    }
+
+    /* 活潑版：多色光暈插畫背景 */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(circle at -5% 0%, rgba(248, 113, 113, 0.45) 0, transparent 55%),
+        radial-gradient(circle at 105% 10%, rgba(56, 189, 248, 0.35) 0, transparent 55%),
+        radial-gradient(circle at 85% 85%, rgba(129, 140, 248, 0.40) 0, transparent 60%),
+        radial-gradient(circle at 20% 90%, rgba(244, 114, 182, 0.32) 0, transparent 60%);
+      opacity: 0.95;
+      mix-blend-mode: screen;
+      animation: heroGlow 10s ease-in-out infinite alternate;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes heroGlow {
+      0% {
+        transform: translate3d(0,0,0);
+        opacity: 0.9;
+      }
+      50% {
+        transform: translate3d(0,-6px,0);
+        opacity: 1;
+      }
+      100% {
+        transform: translate3d(0,4px,0);
+        opacity: 0.95;
+      }
     }
 
     .hero-grid {
@@ -216,12 +263,13 @@
       font-size: 13px;
       padding: 4px 12px;
       border-radius: 999px;
-      border: 1px solid rgba(248,250,252,0.16);
+      border: 1px solid rgba(248,250,252,0.22);
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: rgba(15,23,42,0.85);
+      background: rgba(15,23,42,0.88);
       color: #e5e7eb;
+      box-shadow: 0 6px 16px rgba(15,23,42,0.7);
     }
 
     .chip-dot {
@@ -229,7 +277,7 @@
       height: 7px;
       border-radius: 999px;
       background: var(--accent);
-      box-shadow: 0 0 0 4px rgba(248,113,113,0.35);
+      box-shadow: 0 0 0 5px rgba(248,113,113,0.45);
     }
 
     .hero-title {
@@ -246,7 +294,8 @@
     }
 
     .hero-highlight {
-      color: #fb7185;
+      color: #fbbf24;
+      text-shadow: 0 0 18px rgba(250, 204, 21, 0.55);
     }
 
     .hero-subtitle {
@@ -285,15 +334,104 @@
 
     .hero-note {
       font-size: 13px;
-      color: #9ca3af;
+      color: #e5e7eb;
+      opacity: 0.9;
+    }
+
+    /* 右側 Q 版頭像 + 卡片 */
+    .hero-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .hero-avatar-card {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 22px;
+      padding: 16px 18px;
+      background: radial-gradient(circle at 0% 0%, rgba(248,113,113,0.24) 0, rgba(15,23,42,1) 55%);
+      border: 1px solid rgba(248,250,252,0.24);
+      box-shadow: 0 18px 40px rgba(15,23,42,0.9);
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .hero-avatar-wrap {
+      position: relative;
+    }
+
+    .hero-avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 999px;
+      background:
+        radial-gradient(circle at 20% 0%, #fef9c3 0, #f97373 45%, #1f2937 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+      font-weight: 900;
+      color: #fefce8;
+      box-shadow: 0 14px 30px rgba(15,23,42,0.95);
+      border: 3px solid rgba(248,250,252,0.95);
+    }
+
+    /* 如果之後有 Q 版頭像圖片，可以這樣換：
+       .hero-avatar {
+         background: none;
+         border: 3px solid rgba(248,250,252,0.95);
+         overflow: hidden;
+       }
+       .hero-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    */
+
+    .hero-avatar-badge {
+      position: absolute;
+      right: -2px;
+      bottom: -4px;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #ecfdf5;
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(248,250,252,0.9);
+      box-shadow: 0 6px 14px rgba(22,163,74,0.8);
+      white-space: nowrap;
+    }
+
+    .hero-avatar-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .hero-avatar-name {
+      font-size: 17px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .hero-avatar-role {
+      font-size: 13px;
+      color: #cbd5f5;
+      margin-bottom: 6px;
+    }
+
+    .hero-avatar-desc {
+      font-size: 13px;
+      color: #e5e7eb;
     }
 
     .hero-card {
-      background: radial-gradient(circle at top left, rgba(248,250,252,0.1), rgba(15,23,42,1));
+      background: radial-gradient(circle at top left, rgba(248,250,252,0.16), rgba(15,23,42,0.98));
       border-radius: 22px;
-      border: 1px solid rgba(148,163,184,0.55);
+      border: 1px solid rgba(148,163,184,0.6);
       padding: 20px 22px;
-      box-shadow: var(--shadow-soft);
+      box-shadow: 0 16px 42px rgba(15,23,42,0.85);
+      width: 100%;
+      max-width: 360px;
     }
 
     .hero-card-title {
@@ -315,31 +453,141 @@
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      color: #9ca3af;
+      color: #cbd5f5;
       margin-bottom: 3px;
       font-weight: 600;
     }
 
-    /* GENERIC SECTIONS + 背景對比 */
+    @media (max-width: 768px) {
+      .hero-avatar-card {
+        max-width: 100%;
+      }
+      .hero-card {
+        max-width: 100%;
+      }
+    }
+
+    /* SECTION 結構與背景對比（活潑版） */
     section {
       padding: 60px 0;
     }
 
     #about {
-      background: #f9fafb;
+      position: relative;
+      background: radial-gradient(circle at 0% 0%, rgba(248, 113, 113, 0.08) 0, transparent 55%), #f9fafb;
+      overflow: hidden;
     }
+
+    #about::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(248,113,113,0.12) 0, transparent 55%),
+        radial-gradient(circle at 90% 95%, rgba(59,130,246,0.14) 0, transparent 55%);
+      opacity: 0.9;
+    }
+
+    #about .container {
+      position: relative;
+      z-index: 1;
+    }
+
     #services {
-      background: #ffffff;
+      position: relative;
+      background:
+        linear-gradient(135deg, rgba(239,246,255,1) 0, #ffffff 45%, rgba(255,247,237,1) 100%);
+      overflow: hidden;
     }
+
+    #services::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(circle at 80% 0%, rgba(129,140,248,0.14) 0, transparent 55%),
+        radial-gradient(circle at 0% 100%, rgba(251,191,36,0.12) 0, transparent 55%);
+      opacity: 0.85;
+    }
+
+    #services .container {
+      position: relative;
+      z-index: 1;
+    }
+
     #cases {
-      background: #f3f4f6;
+      position: relative;
+      background:
+        linear-gradient(135deg, #f3f4f6 0, #e5f4ff 45%, #fef2ff 100%);
+      overflow: hidden;
     }
+
+    #cases::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(56,189,248,0.14) 0, transparent 55%),
+        radial-gradient(circle at 90% 85%, rgba(244,114,182,0.16) 0, transparent 55%);
+    }
+
+    #cases .container {
+      position: relative;
+      z-index: 1;
+    }
+
     #classroom {
-      background: #ffffff;
+      position: relative;
+      background:
+        linear-gradient(180deg, #ffffff 0, #f9fafb 100%);
+      overflow: hidden;
     }
+
+    #classroom::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(circle at 100% 0%, rgba(129,140,248,0.14) 0, transparent 55%),
+        radial-gradient(circle at 0% 80%, rgba(45,212,191,0.14) 0, transparent 55%);
+    }
+
+    #classroom .container {
+      position: relative;
+      z-index: 1;
+    }
+
     #contact {
-      background: #f9fafb;
+      position: relative;
+      background:
+        radial-gradient(circle at 0% 100%, rgba(45,212,191,0.12) 0, transparent 60%),
+        #f9fafb;
       border-top: 1px solid #e5e7eb;
+      overflow: hidden;
+    }
+
+    #contact::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(circle at 100% 0%, rgba(248,113,113,0.12) 0, transparent 55%);
+      opacity: 0.9;
+    }
+
+    #contact .container {
+      position: relative;
+      z-index: 1;
     }
 
     .section-header {
@@ -376,9 +624,9 @@
       width: 64px;
       height: 3px;
       border-radius: 999px;
-      background: linear-gradient(90deg, var(--accent), #fb7185);
+      background: linear-gradient(90deg, var(--accent), var(--accent-blue), var(--accent-purple));
       margin: 18px auto 0;
-      opacity: 0.9;
+      opacity: 0.95;
     }
 
     /* 4 保證 */
@@ -398,7 +646,7 @@
       border-radius: var(--radius-lg);
       padding: 20px 20px 18px;
       box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(148,163,184,0.3);
+      border: 1px solid rgba(148,163,184,0.32);
       position: relative;
       overflow: hidden;
     }
@@ -408,10 +656,12 @@
       position: absolute;
       inset: 0;
       border-radius: inherit;
-      border-top: 3px solid rgba(248,113,113,0.8);
+      background:
+        radial-gradient(circle at 0% 0%, rgba(248,113,113,0.14) 0, transparent 55%),
+        radial-gradient(circle at 100% 100%, rgba(56,189,248,0.10) 0, transparent 55%);
       opacity: 0;
       pointer-events: none;
-      transition: opacity 0.2s ease;
+      transition: opacity 0.18s ease;
     }
 
     .card:hover::before {
@@ -544,8 +794,9 @@
     .lesson-item {
       padding: 16px 18px;
       border-radius: 14px;
-      background: #f9fafb;
+      background: rgba(249,250,251,0.95);
       border: 1px solid rgba(209,213,219,0.9);
+      box-shadow: 0 10px 30px rgba(15,23,42,0.06);
     }
 
     .lesson-title {
@@ -648,6 +899,7 @@
       color: #9ca3af;
       padding: 20px 0 22px;
       font-size: 13px;
+      border-top: 1px solid rgba(15,23,42,0.8);
     }
 
     .footer-row {
@@ -687,7 +939,7 @@
       }
 
       .hero {
-        padding-top: 52px;
+        padding-top: 56px;
       }
     }
 
@@ -695,7 +947,7 @@
       scroll-behavior: smooth;
     }
 
-    /* === 浮動聯絡按鈕：右上角＋呼吸動畫 === */
+    /* === 浮動聯絡按鈕：右上角＋呼吸動畫（活潑版） === */
     .floating-contact {
       position: fixed;
       right: 16px;
@@ -718,12 +970,12 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
       cursor: pointer;
       opacity: 0.96;
-      /* 共用呼吸動畫 */
+      border: 2px solid rgba(248,250,252,0.9);
       animation: float-pulse 1.9s ease-in-out infinite;
     }
 
     .floating-btn:hover {
-      transform: translateY(-2px);
+      transform: translateY(-2px) scale(1.04);
       box-shadow: 0 8px 22px rgba(0,0,0,0.45);
       opacity: 1;
     }
@@ -745,7 +997,7 @@
     }
 
     .phone-btn {
-      background: #fbbf24; /* 黃色電話 */
+      background: #f97316; /* 活潑一點的橘黃 */
       animation-delay: 0.36s;
     }
     .phone-btn .fas.fa-phone-alt {
@@ -754,7 +1006,7 @@
 
     @media (max-width: 768px) {
       .floating-contact {
-        top: 70px;
+        top: 74px;
         right: 10px;
         gap: 8px;
       }
@@ -778,8 +1030,8 @@
         opacity: 0.9;
       }
       50% {
-        transform: translateY(-3px) scale(1.06);
-        box-shadow: 0 10px 26px rgba(0,0,0,0.5);
+        transform: translateY(-4px) scale(1.09);
+        box-shadow: 0 10px 26px rgba(0,0,0,0.55);
         opacity: 1;
       }
     }
@@ -854,23 +1106,46 @@
         </div>
       </div>
 
-      <div class="hero-card">
-        <div class="hero-card-title">近期常見委託類型</div>
-        <div class="hero-stat-row">
-          <div>
-            <div class="hero-stat-label">職災案件</div>
-            <div>工地職災、外包司機壓傷、長期勞損、未加保勞保⋯⋯</div>
+      <!-- 右側 Q版頭像 + 案件卡片 -->
+      <div class="hero-visual">
+        <div class="hero-avatar-card">
+          <div class="hero-avatar-wrap">
+            <div class="hero-avatar">
+              芳
+              <!-- 如果有 Q版頭像圖片，可以改成：
+              <img src="your-avatar.png" alt="芳芳姐 Q 版頭像">
+              -->
+            </div>
+            <div class="hero-avatar-badge">理賠導航中</div>
           </div>
-          <div>
-            <div class="hero-stat-label">車禍理賠</div>
-            <div>強制險後遺症、第三人責任險、和解後追加理賠⋯⋯</div>
+          <div class="hero-avatar-text">
+            <div class="hero-avatar-name">芳芳姐</div>
+            <div class="hero-avatar-role">職災．車禍．學保．保險爭議 統包理賠顧問</div>
+            <div class="hero-avatar-desc">
+              翻譯條款、整合勞保與商業保險、幫你把每一塊該拿回來的權益都翻出來。
+            </div>
           </div>
-          <div>
-            <div class="hero-stat-label">其他爭議</div>
-            <div>學保／托嬰意外、疾病理賠遭拒、保單條款認定爭議等</div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-title">近期常見委託類型</div>
+          <div class="hero-stat-row">
+            <div>
+              <div class="hero-stat-label">職災案件</div>
+              <div>工地職災、外包司機壓傷、長期勞損、未加保勞保⋯⋯</div>
+            </div>
+            <div>
+              <div class="hero-stat-label">車禍理賠</div>
+              <div>強制險後遺症、第三人責任險、和解後追加理賠⋯⋯</div>
+            </div>
+            <div>
+              <div class="hero-stat-label">其他爭議</div>
+              <div>學保／托嬰意外、疾病理賠遭拒、保單條款認定爭議等</div>
+            </div>
           </div>
         </div>
       </div>
+      <!-- 右側結束 -->
     </div>
   </section>
 
