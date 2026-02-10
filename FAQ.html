@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常見問題 (FAQ) - 芳芳姐理賠導航員</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #F8F7F4;
+        }
+        .text-brand-dark { color: #3D405B; }
+        .text-brand-accent { color: #81B29A; }
+        .bg-brand-accent { background-color: #81B29A; }
+        .btn-primary {
+            background-color: #3D405B;
+            color: #F8F7F4;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #F2CC8F;
+            color: #3D405B;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .btn-filter {
+            background-color: #E0E1DD;
+            color: #3D405B;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .btn-filter.active {
+            background-color: #3D405B;
+            color: #F8F7F4;
+            border-color: #81B29A;
+        }
+        .btn-filter:hover {
+            border-color: #81B29A;
+        }
+        .faq-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .faq-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .faq-header {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #F8F7F4;
+            transition: background-color 0.3s ease;
+        }
+        .faq-header:hover {
+            background-color: #E0E1DD;
+        }
+        .faq-header.active {
+            background-color: #81B29A;
+            color: white;
+        }
+        .faq-header.active .faq-question {
+            color: white;
+        }
+        .faq-header.active .toggle-icon {
+            color: white;
+            transform: rotate(180deg);
+        }
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #3D405B;
+            flex: 1;
+            transition: color 0.3s ease;
+        }
+        .toggle-icon {
+            font-size: 1.5rem;
+            color: #3D405B;
+            transition: transform 0.3s ease, color 0.3s ease;
+            margin-left: 16px;
+        }
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .faq-content.open {
+            max-height: 500px;
+        }
+        .faq-answer {
+            padding: 20px;
+            color: #555;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+        .faq-answer ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+        .faq-answer li {
+            margin-bottom: 8px;
+        }
+        .category-badge {
+            display: inline-block;
+            background-color: #81B29A;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-top: 8px;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .search-box {
+            background-color: white;
+            border: 2px solid #E0E1DD;
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        .search-box:focus {
+            outline: none;
+            border-color: #81B29A;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-brand-dark">芳芳姐理賠導航員</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html#about" class="text-lg text-gray-600 hover:text-brand-accent">關於我們</a>
+                <a href="index.html#services" class="text-lg text-gray-600 hover:text-brand-accent">服務項目</a>
+                <a href="index.html#cases" class="text-lg text-gray-600 hover:text-brand-accent">客戶案例</a>
+                <a href="index.html#classroom" class="text-lg text-gray-600 hover:text-brand-accent">理賠小教室</a>
+                <a href="FAQ.html" class="text-lg text-gray-600 hover:text-brand-accent font-bold">常見問題</a>
+                <a href="index.html#contact" class="btn-primary px-4 py-2 rounded-full text-white">預約諮詢</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-6 py-12 md:py-20">
+
+        <!-- Header Section -->
+        <section class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-black text-brand-dark mb-4">常見問題</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">有任何疑問嗎？以下是我們最常被問到的問題。如果您沒有找到答案，歡迎直接與我們聯繫。</p>
+        </section>
+
+        <!-- Search Box -->
+        <section class="mb-8">
+            <input type="text" id="searchBox" class="search-box w-full" placeholder="搜尋問題關鍵字...">
+        </section>
+
+        <!-- Category Filter -->
+        <section class="mb-8 flex flex-wrap gap-3 justify-center">
+            <button class="btn-filter active px-6 py-2 rounded-full font-semibold" data-category="all">全部</button>
+            <button class="btn-filter px-6 py-2 rounded-full font-semibold" data-category="flow">服務流程</button>
+            <button class="btn-filter px-6 py-2 rounded-full font-semibold" data-category="fee">費用與收費</button>
+            <button class="btn-filter px-6 py-2 rounded-full font-semibold" data-category="professional">專業性</button>
+            <button class="btn-filter px-6 py-2 rounded-full font-semibold" data-category="privacy">隱私安全</button>
+            <button class="btn-filter px-6 py-2 rounded-full font-semibold" data-category="other">其他</button>
+        </section>
+
+        <!-- FAQ Items -->
+        <section id="faqContainer" class="max-w-4xl mx-auto">
+            <!-- FAQ items will be dynamically inserted here -->
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 芳芳姐理賠導航員. All rights reserved.</p>
+            <p class="mt-2 text-sm">LINE: 0922388397 | Email: serena0229@gmail.com</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Data
+        const faqData = [
+            {
+                id: 1,
+                question: "我該如何開始諮詢？",
+                answer: "您可以透過網站上的「加入 LINE 線上諮詢」按鈕，或直接加入 LINE ID: 0922388397 與我們聯繫。您也可以填寫「聯絡我們」表單，留下您的聯絡方式與案件大方向，我們會盡快與您聯繫並預約回電。",
+                category: "flow"
+            },
+            {
+                id: 2,
+                question: "諮詢需要費用嗎？",
+                answer: "初步諮詢是免費的。我們會先了解您的案件狀況，並評估是否有協助的空間。若評估後認為可以提供服務，才會進一步討論合作模式與費用。",
+                category: "flow"
+            },
+            {
+                id: 3,
+                question: "我可以只進行單次諮詢或文件校對嗎？",
+                answer: "可以。若您的案件狀況相對單純，或僅需要專業意見來檢視文件，我們也提供「單次諮詢」服務。費用將依諮詢時間或服務內容另行報價。",
+                category: "flow"
+            },
+            {
+                id: 4,
+                question: "服務區域有限制嗎？",
+                answer: "我們提供台灣北中南地區的線上諮詢服務。若案件有實體會面需求，我們會再與您協調安排。",
+                category: "flow"
+            },
+            {
+                id: 5,
+                question: "你們的收費方式為何？",
+                answer: "我們主要採「無預收、結果論」的收費模式。這表示在您實際收到理賠金之前，我們不會向您收取任何顧問費用。只有在您成功獲得理賠金後，才會依約定比例收取顧問費，確保您的權益。",
+                category: "fee"
+            },
+            {
+                id: 6,
+                question: "如果理賠失敗，我需要支付費用嗎？",
+                answer: "若案件最終未能成功獲得理賠金，您無需支付任何顧問費用。我們的目標是為您爭取應得的權益，若無結果，我們也不會收取費用。",
+                category: "fee"
+            },
+            {
+                id: 7,
+                question: "芳芳姐的專業背景是什麼？",
+                answer: "芳芳姐團隊具備跨領域的專業知識，尤其擅長職災、車禍、學保及各類商業保險爭議的理賠案件。我們不僅熟悉保險條款，更了解勞基法、職災認定等相關法規，能提供全面的權益盤點與策略規劃。",
+                category: "professional"
+            },
+            {
+                id: 8,
+                question: "你們的服務與一般保險業務員有何不同？",
+                answer: "一般保險業務員主要負責保單銷售與基本理賠協助。而我們是獨立的理賠導航員，站在您的立場，協助您釐清所有可能的理賠權益，包含勞保、職災、車禍強制險、商業保險等多方資源，並規劃最佳策略，確保您能爭取到最大化的理賠金，而非僅限於單一保險公司的理賠。",
+                category: "professional"
+            },
+            {
+                id: 9,
+                question: "哪些案件類型是你們擅長的？",
+                answer: "我們擅長處理：<ul><li>車禍調解與理賠規劃（強制險、第三人責任險、精神慰撫金等）</li><li>勞保／職災保險給付申請（傷病、失能、喪葬、遺屬年金等）</li><li>職業災害全局規劃（職災認定、勞資爭議協商、勞基法59條等）</li><li>學保、托嬰、學童意外與疾病理賠</li><li>各類商業保險爭議與拒賠申訴</li></ul>",
+                category: "professional"
+            },
+            {
+                id: 10,
+                question: "我的案件內容與個人資料會被保密嗎？",
+                answer: "絕對會。我們嚴格遵守個人資料保護法，您的案件內容與所有個人資料將受到最高規格的保密。所有資訊僅用於評估與爭取您應得的權益，絕不會外洩給第三方。",
+                category: "privacy"
+            },
+            {
+                id: 11,
+                question: "我該如何判斷我的案件是否需要專業協助？",
+                answer: "如果您對理賠流程感到困惑、不確定自己的權益、遇到保險公司拒賠、或案件涉及多方（如職災同時有車禍），都建議尋求專業協助。即使是看似簡單的案件，專業的評估也能幫助您避免錯失權益或少領理賠金。您可以先進行免費諮詢，讓我們為您初步判斷。",
+                category: "other"
+            }
+        ];
+
+        const categoryLabels = {
+            flow: "服務流程",
+            fee: "費用與收費",
+            professional: "專業性",
+            privacy: "隱私安全",
+            other: "其他"
+        };
+
+        let currentFilter = "all";
+        let searchTerm = "";
+
+        function renderFAQ() {
+            const container = document.getElementById("faqContainer");
+            container.innerHTML = "";
+
+            const filtered = faqData.filter(item => {
+                const matchesCategory = currentFilter === "all" || item.category === currentFilter;
+                const matchesSearch = searchTerm === "" || 
+                    item.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    item.answer.toLowerCase().includes(searchTerm.toLowerCase());
+                return matchesCategory && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = '<p class="text-center text-gray-500 py-8">找不到相關問題，請嘗試其他搜尋條件。</p>';
+                return;
+            }
+
+            filtered.forEach((item, index) => {
+                const faqItem = document.createElement("div");
+                faqItem.className = "faq-item fade-in";
+                faqItem.style.animationDelay = `${index * 0.1}s`;
+                faqItem.innerHTML = `
+                    <div class="faq-header" onclick="toggleFAQ(this)">
+                        <span class="faq-question">Q${item.id}: ${item.question}</span>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="faq-content">
+                        <div class="faq-answer">
+                            <p><strong style="color: #3D405B;">A${item.id}:</strong> ${item.answer}</p>
+                            <span class="category-badge">${categoryLabels[item.category]}</span>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(faqItem);
+            });
+        }
+
+        function toggleFAQ(header) {
+            const content = header.nextElementSibling;
+            const isOpen = content.classList.contains("open");
+
+            // Close all other FAQs
+            document.querySelectorAll(".faq-content").forEach(el => {
+                el.classList.remove("open");
+            });
+            document.querySelectorAll(".faq-header").forEach(el => {
+                el.classList.remove("active");
+            });
+
+            // Toggle current FAQ
+            if (!isOpen) {
+                content.classList.add("open");
+                header.classList.add("active");
+            }
+        }
+
+        // Event Listeners
+        document.querySelectorAll(".btn-filter").forEach(btn => {
+            btn.addEventListener("click", function() {
+                document.querySelectorAll(".btn-filter").forEach(b => b.classList.remove("active"));
+                this.classList.add("active");
+                currentFilter = this.dataset.category;
+                renderFAQ();
+            });
+        });
+
+        document.getElementById("searchBox").addEventListener("input", function() {
+            searchTerm = this.value;
+            renderFAQ();
+        });
+
+        // Initial render
+        renderFAQ();
+    </script>
+
+</body>
+</html>
