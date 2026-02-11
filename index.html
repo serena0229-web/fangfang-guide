@@ -932,16 +932,88 @@
       opacity: 1;
     }
 
+/* 漢堡選單按鈕 */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.menu-toggle span {
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
     /* 小螢幕調整 */
     @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 250px;
+    height: calc(100vh - 60px);
+    background: rgba(15,23,42,0.98);
+    backdrop-filter: blur(16px);
+    flex-direction: column;
+    gap: 0;
+    padding: 20px 0;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.3);
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+  
+  .nav-links.active {
+    right: 0;
+  }
+  
+  .nav-links a {
+    padding: 16px 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  .nav-links a::after {
+    display: none;
+  }
+  
 
       .hero {
         padding-top: 56px;
       }
     }
+  
+  .floating-contact {
+    top: 74px;
+    right: 10px;
+    gap: 8px;
+  }
+  
+  .floating-btn {
+    width: 44px;
+    height: 44px;
+  }
 
     html {
       scroll-behavior: smooth;
@@ -1498,5 +1570,6 @@
   </footer>
 </body>
 </html>
+
 
 
