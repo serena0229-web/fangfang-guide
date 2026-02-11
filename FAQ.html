@@ -162,6 +162,13 @@
             </div>
         </div>
     </nav>
+    
+    <!-- 手機版漢堡選單按鈕 -->
+    <button id="menu-toggle" class="menu-toggle" aria-label="選單">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
     <div class="container mx-auto px-6 py-12 md:py-20">
 
@@ -358,5 +365,16 @@
         renderFAQ();
     </script>
 
+
+        <!-- 手機版漢堡選單 JavaScript -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
