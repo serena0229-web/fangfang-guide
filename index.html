@@ -1129,6 +1129,13 @@
                     <a href="FAQ.html">常見問題</a>
         <a href="#contact">聯絡我們</a>
       </nav>
+      
+      <!-- 手機版漢堡選單按鈕 -->
+      <button class="menu-toggle" id="menuToggle" aria-label="開啟選單">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
       <div class="nav-cta">
         <a class="btn btn-outline" href="#contact">預約諮詢</a>
@@ -1568,8 +1575,29 @@
       </div>
     </div>
   </footer>
+  <script>
+    // 手機版漢堁選單控制
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+      });
+      
+      // 點選單連結後自動關閉選單
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          menuToggle.classList.remove('active');
+          navLinks.classList.remove('active');
+        });
+      });
+    }
+  </script>
 </body>
 </html>
+
 
 
 
